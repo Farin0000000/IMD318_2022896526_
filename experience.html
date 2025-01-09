@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - My Portfolio</title>
+    <style>
+        body
+{
+  background-color: black;
+}
+
+ul
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: ghostwhite;
+}
+
+li 
+{
+  float: left;
+}
+
+li a 
+{
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) 
+{
+  background-color: lavender;
+}
+
+.active
+  {
+  background-color: lavenderblush;
+  }
+
+header 
+{
+  background-color: ghostwhite;
+  padding: 20px;
+}
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th, td {
+            padding: 15px;
+        }
+
+        th {
+            background-color: #1B1B1B;
+            color: white;
+        }
+
+        td {
+            background-color: #f8f8f8;
+        }
+
+        .btn-open {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .btn-open:hover {
+            background-color: #45a049;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #1B1B1B;
+            color: white;
+            padding: 10px 0;
+            margin-top: 30px;
+        }
+
+ 
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-content {
+            margin: 10% auto;
+            display: block;
+            max-width: 80%;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #aaa;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .modal-close:hover,
+        .modal-close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+     
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        footer
+ {
+  background-color: ghostwhite;
+  padding: 20px;
+  text-align: center;
+  color: blanchedalmond;
+}
+
+    </style>
+</head>
+<body>
+  
+   <header>
+
+    <h5 style="color: palevioletred; text-align: center;font-size: 40px; font-family: helvetica ;">"Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work." – Steve Jobs</h5>
+
+ </header>
+
+ <br>
+ 
+    <ul>
+  <li><a href="index.html">HOME</a></li>
+  <li><a href="aboutme.html">ABOUT ME</a></li>
+  <li><a href="education.html">MY EDUCATION JOURNEY</a></li>
+  <li><a href="memories.html">ABOUT MY MEMORIES</a></li>
+  <li><a href="experience.html">MY WORKING EXPERIENCE</a></li>
+</ul>
+
+
+
+
+
+    <div class="content">
+      
+        <table>
+            <thead>
+                <tr>
+                    <th>Job Title</th>
+                    <th>Company</th>
+                    <th>Duration</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Kitchen Assistant</td>
+                    <td>Nasi Ayam Jubille</td>
+                    <td>2023</td>
+                    <td><button class="btn-open" onclick="openModal('kedai')">Open</button></td>
+                </tr>
+                <tr>
+                    <td>Part-Time Teacher</td>
+                    <td>Teki Programme Tuition Centre</td>
+                    <td>2024</td>
+                    <td><button class="btn-open" onclick="openModal('teki')">Open</button></td>
+                </tr>
+                <tr>
+                    <td>An Internship student</td>
+                    <td>UC Tati Library</td>
+                    <td>July 2024 - September 2024</td>
+                    <td><button class="btn-open" onclick="openModal('library')">Open</button></td>
+                </tr>
+            
+            </tbody>
+        </table>
+    </div>
+
+   
+    <div id="kedaiModal" class="modal">
+        <span class="modal-close" onclick="closeModal('kedai')">&times;</span>
+        <img class="modal-content" id="kedaiImg" src="gambar/kedai.jpeg" alt="kitchen Assistant">
+    </div>
+
+    <div id="tekiModal" class="modal">
+        <span class="modal-close" onclick="closeModal('teki')">&times;</span>
+        <img class="modal-content" id="tekiImg" src="gambar/teki.jpeg" alt="Part-Time teacher">
+    </div>
+
+    <div id="libraryModal" class="modal">
+        <span class="modal-close" onclick="closeModal('library')">&times;</span>
+        <img class="modal-content" id="libraryImg" src="gambar/library.jpeg" alt="internship">
+    </div>
+
+
+    <script>
+       
+        function openModal(experience) {
+            document.getElementById(experience + "Modal").style.display = "block";
+        }
+
+        
+        function closeModal(experience) {
+            document.getElementById(experience + "Modal").style.display = "none";
+        }
+    </script>
+
+    <br>
+
+<footer>
+  <p style=" color: black; font-size: 10px; font-family: sans-serif;">@FARIN2024</p>
+</footer>
+
+    
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style> 
+	body
+{
+  background-color: black;
+}
+
+ul
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: ghostwhite;
+}
+
+li 
+{
+  float: left;
+}
+
+li a 
+{
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) 
+{
+  background-color: lavender;
+}
+
+.active
+  {
+  background-color: lavenderblush;
+  }
+
+ header 
+{
+  background-color: ghostwhite;
+  padding: 20px;
+}
+
+img 
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid black 30px ;
+}
+
+video
+{
+    position: center;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+@keyframes moveTitle 
+{
+            0% {
+                transform: translateX(-100%);
+            }
+            50% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+        .myfamily-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+            gap: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+            background-color: white;
+
+            .container:hover .overlay
+     {
+            bottom: 0;
+            height: 100%;
+}
+
+        }
+
+        .myfamily-item {
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .myfamily-item img {
+            width: 50%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .myfamily-item:hover img {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+
+        .myfamily-item {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s forwards;
+        }
+
+        .myfamily-item:nth-child(odd) {
+            animation-delay: 0.2s;
+        }
+
+        .myfamily-item:nth-child(even) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+
+
+
+footer
+ {
+  background-color: ghostwhite;
+  padding: 20px;
+  text-align: center;
+  color: blanchedalmond;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+
+  <h5 style="color: palevioletred; text-align: center;font-size: 40px; font-family: garamond ;">"Memory is the treasure house of the mind wherein the monuments thereof are kept and preserved." – Thomas Fuller</h5>
+
+ </header>
+
+ <ul>
+  <li><a href="index.html">HOME</a></li>
+  <li><a href="aboutme.html">ABOUT ME</a></li>
+  <li><a href="education.html">MY EDUCATION JOURNEY</a></li>
+  <li><a href="memories.html">ABOUT MY MEMORIES</a></li>
+  <li><a href="experience.html">MY WORKING EXPERIENCE</a></li>
+</ul>
+
+<br>
+	 <div class="gallery-container">
+        <div class="myfamily-item"><img src="gambar/prog.JPEG" alt="Image 1"></div>
+        <div class="myfamily-item"><img src="gambar/fren.jpeg" alt="Image 2"></div>
+        <div class="myfamily-item"><img src="gambar/sun.jpeg" alt="Image 3"></div>
+        <div class="myfamily-item"><img src="gambar/potret.jpeg" alt="Image 5"></div>
+        <div class="myfamily-item"><div class="overlay"><div class="text">Hello World</div><img src="gambar/raya.jpeg" alt="Image 7">
+    </div>
+
+    <video width="500" height="700" controls>
+        <source src="gambar/vidp.mp4" type="video/mp4">
+            your browser doesn't support video
+    </video>
+
+
+	
+</body>
+</html>

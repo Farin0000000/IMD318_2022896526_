@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+
+<style>
+
+body
+{
+  background-color: black;
+}
+
+ul
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: ghostwhite;
+}
+
+li 
+{
+  float: left;
+}
+
+li a 
+{
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) 
+{
+  background-color: lavender;
+}
+
+.active
+  {
+  background-color: lavenderblush;
+  }
+
+ header 
+{
+  background-color: ghostwhite;
+  padding: 20px;
+}
+
+img 
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid black;
+}
+
+{
+  box-sizing: border-box;
+}
+
+.timeline 
+{
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::after 
+{
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left 
+{
+  right: 6.8%;
+}
+
+.right 
+{
+  left: 50%;
+}
+
+.left::before
+ {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+.right::before
+ {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.right::after 
+{
+  left: -16px;
+}
+
+.content
+ {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 600px) 
+{
+  .timeline::after {
+  left: 31px;
+  }
+
+.container
+ {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+
+.container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  .left::after, .right::after 
+  {
+  left: 15px;
+  }
+
+  .right 
+  {
+  left: 0%;
+  }
+
+  footer
+ {
+  background-color: ghostwhite;
+  padding: 20px;
+  text-align: center;
+  color: blanchedalmond;
+}
+
+  </style>
+
+</head>
+
+<body>
+
+   <header>
+
+  <h5 style="color: palevioletred; text-align: center;font-size: 40px; font-family: verdana ;">THIS IS MY EDUCATION JOURNEY</h5>
+
+ </header>
+
+	<ul>
+  <li><a href="index.html">HOME</a></li>
+  <li><a href="aboutme.html">ABOUT ME</a></li>
+  <li><a href="education.html">MY EDUCATION JOURNEY</a></li>
+  <li><a href="memories.html">ABOUT MY MEMORIES</a></li>
+  <li><a href="experience.html">MY WORKING EXPERIENCE</a></li>
+</ul>
+
+<br>
+
+
+<div class="timeline">
+  <div class="container left">
+    <div class="content">
+      <h2>2010</h2>
+      <img src="gambar/kemas.jpg" alt="Tabika Kemas" width="200px" height="150px">
+      <p>I started my school at Kem UPP perlis at a kindergarten that called Tabika Kemas in the back of 2010. i started to create a beautiful memory as a kid that full of happiness there.</p>
+    </div> 
+  </div>
+
+  <div class="container right">
+    <div class="content">
+      <h2>2011</h2>
+      <img src="gambar/sri2.jpg" alt="SRI II" width="200px" height="150px">
+      <p>In the back of 2011, I started my primary school era at Sekolah Rendah Islam II from standard one to standard five.</p>
+    </div>
+  </div>
+
+  <div class="container left">
+    <div class="content">
+      <h2>2015</h2>
+      <img src="gambar/skka.png" alt="SKKA" width="200px" height="150px">
+      <p>I continue my primary school studies at Sk Rantau abang from standard Five to standard. I got 5B 1C for my UPSR result.</p>
+    </div>
+  </div>
+
+  <div class="container right">
+    <div class="content">
+      <h2>2017</h2>
+      <img src="gambar/kora.jpg" alt="KORA" width="200px" height="170px">
+      <p>In the back of 2017, I started my secondary school era at SMK Kompleks Rantau Abang.I create so much memories with my classmate in the secondary school. I got 3A 2B 2C 1D for my PT3 result and also I got 4A 4B 1D for my SPM result.</p>
+    </div>
+  </div>
+
+  <div class="container left">
+    <div class="content">
+      <h2>2022</h2>
+      <img src="gambar/uitm.png" alt="UITM DIHATIKU" width="260px" height="170px">
+      <p>After I have finish my secondary school studies, I decided to pursue my studies in information management course at UiTM Machang Branch. I enjoyed a lot my diploma life with my fellows.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p style=" color: black; font-size: 10px; font-family: sans-serif;">@FARIN2024</p>
+</footer>
+
+
+</body>
+</html>
